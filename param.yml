@@ -1,0 +1,20 @@
+# -----------------------
+# Copyright (c) 2017, Korbinian Breinl
+# All rights reserved.
+#
+# Model parameter file
+# -----------------------
+
+p_thr      : 0.1      # precipitation threshold
+start_sim  : 2017     # start of the simulation period
+length     : 30       # length of the generated precipitation series
+max_dup    : 1        # maximum number of duplicates
+mc_order   : 1        # order of the Markov chain
+cl_period  : season  # clustering period ('month' or 'season')
+
+param_p        : off      # parametric precipitation sampling ('on' or 'off')
+  min_sample   : 100       # minimum number of samples per season/month for precipitation distributions
+  corr_rand    : off       # correlated random numbers ('on' or 'off')
+  dist         : Weibull-GPD    # distribution ('Weibull', 'Gamma' or 'Weibull-GPD')
+    pareto_thr : 3        # threshold for GPD distribution when using Weibull-GPD model
+
